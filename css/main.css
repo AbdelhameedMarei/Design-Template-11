@@ -1,0 +1,609 @@
+/*
+    ===============================
+            Global Rules
+    ===============================
+*/
+
+:root{
+    --main-color: #eb5424;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+/*
+    ===============================
+            Navbar Styles
+    ===============================
+*/
+
+.nav{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px #333;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo{
+    width: 50%;
+}
+
+.nav .navlist ul li{
+    display: inline-block;
+}
+
+.nav .navlist ul li a{
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.nav .navlist ul li a:hover{
+    color: var(--main-color);
+}
+
+.nav input, .nav label{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+}
+
+.nav input{
+    display: none;
+}
+
+.nav label {
+    width: 15px;
+    height: 15px;
+    background: url('../images/Navbar/open.png') no-repeat ;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav input:checked ~ .navlist ul {
+    display: block;
+}
+
+.nav input:checked ~ label {
+    background: url('../images/Navbar/close.png') no-repeat ;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+
+    .nav .logo{
+        width: 100%;
+    }
+
+    .nav label {
+        display: block;
+    }
+
+    .nav .navlist ul{
+        display: none;
+    }
+
+    .nav input:checked ~ .navlist ul li{
+        display: block;
+        width: 100%;
+        padding-top: 20px;
+        padding-right: 80px;
+        margin-top: 20px;
+    }
+}
+
+/*
+    ===============================
+            Home Styles
+    ===============================
+*/
+
+.home{
+    height: 600px;
+    background: url('../images/Home/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+
+.home .home-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+
+.home-info h1{
+    color: #5e5e5e;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.home-info h3{
+    color: var(--main-color);
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.home-info p{
+    color: #888888;
+    margin-top: 20px;
+    line-height: 1.7;
+    font-size: 20px;
+}
+
+.home-info p span{
+    color: #222;
+}
+
+.home-info button{
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    
+}
+
+.home-info button:hover{
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+/*
+    ===============================
+            Work Styles
+    ===============================
+*/
+
+.work{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.work h1{
+    font-size: 50px;
+}
+
+.work .work-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.work .work-content .card {
+    border: 1px solid #888;
+    height: 450px;
+    text-align: center;
+}
+
+.work .work-content .card .card-info{
+    padding-top: 40%;
+    
+}
+
+.work-content .card .card-info i{
+    color: #888888;
+    font-size: 30px;
+}
+
+.work-content .card .card-info h3{
+    color: var(--main-color);
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.work-content .card .card-info hr{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.work-content .card .card-info p{
+    color: #888888;
+    padding: 30px 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+    .work h1{
+        text-align: center;
+    }
+
+    .work .work-content{
+        flex-direction: column;
+
+    }
+
+    .work .work-content .card{
+        height: 340px;
+    }
+
+    .work .work-content .card .card-info{
+        padding-top: 15%;
+    }
+}
+
+
+.portfolio{
+    background-color: #f8f8f8;
+    padding-top: 20px
+}
+
+.portfolio .porto-title{
+    text-align: center;
+}
+
+.portfolio .porto-title h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.portfolio .porto-title .porto-list li{
+    display: inline-block;
+    padding: 10px 35px;
+    cursor: pointer;
+}
+
+
+.portfolio .porto-title .porto-list li.active{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.portfolio .porto-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    font-size: 0;
+    margin-top: 30px;
+}
+
+.porto-content .porto img{
+    width: 100%;
+}
+
+.porto-content .porto{
+    overflow: hidden;
+    position: relative;
+}
+
+.porto-content .porto::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #eb522476;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2rem;
+    transform: translateY(-100%) skew(180deg);
+    transition-duration: 0.6s;
+}
+
+.porto-content .porto:hover::before{
+    transform: translateY(0); 
+}
+
+/*
+    ===============================
+            Resume Styles
+    ===============================
+*/
+
+.resume{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.resume-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-profile {
+    width: 50%;
+    margin-right: 150px;
+}
+
+.my-profile h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.my-profile h2 span{
+    font-weight: 400;
+}
+
+.profile-list  .profile-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.profile-list .profile-item span{
+    font-weight: bold;
+    padding-right: 40px;
+}
+
+.profile-list .profile-item span.mail{
+    color: #eb5424;
+    font-weight: normal;
+}
+
+.skills h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.skills h2 span{
+    font-weight: 400;
+}
+
+.skills p{
+    color: #888888;
+    line-height: 1.7;
+}
+
+.subject{
+    margin-top: 20px;
+}
+
+.subject .title{
+    margin-right: 200px;
+}
+
+.subject .title.css3{
+    margin-right: 240px;
+}
+
+.subject .parent{
+    margin-top: 5px;
+}
+
+.subject .parent .sub1,.sub2,.sub3{
+    width: 100%;
+    height: .1rem;
+    display: block;
+    background-color: var(--main-color);
+}
+
+.subject .parent .sub2{
+    width: 90%;
+}
+
+.subject .parent .sub3{
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .resume-content{
+        flex-direction: column;
+        
+    }
+}
+
+/*
+    ===============================
+            About Styles
+    ===============================
+*/
+
+.about{
+    width: 100%;
+    height: 500px;
+    background-image: url('../images/creative/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about .about-content{
+    padding-top: 100px;
+    width: 50%;
+    float: right;
+    overflow: hidden;
+}
+
+.about .about-content h2{
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.about .about-content h3{
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.about .about-content p{
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .about .about-content{
+        width:100%;
+    }
+}
+
+/*
+    ===============================
+            Social Media Styles
+    ===============================
+*/
+
+.social-media .social-content{
+    display: flex;
+    align-items: center;
+}
+
+.social-content .facebook, .twitter, .pinterest{
+    background-color: #3b5998;
+    color: #fff;
+    width: 33.33%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-content .twitter {
+    background-color: #1DA1F2;
+}
+
+.social-content .pinterest {
+    background-color: #cc2127;
+}
+
+.social-content i {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px !important;
+    color: #888;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.social-media .social-content .info1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.social-media .social-content .info2{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+@media (max-width: 738px) {
+    .social-media .social-content{
+        flex-direction: column;
+    }
+
+    .social-content .facebook, .twitter, .pinterest{
+        width: 80%;
+        height: 200px;
+    }
+}
+
+/*
+    ===============================
+            Contact Style
+    ===============================
+*/
+
+.contact{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contact h1 span{
+    font-weight: normal;
+}
+
+.contact form .name, .email{
+    width: 35%;
+    padding: 8px 0 8px 8px;
+    outline: none;
+}
+
+.contact form .subject{
+    width: 70%;
+    padding: 8px 0 8px 8px;
+    outline: none;
+}
+
+.contact form textarea{
+    width: 70%;
+    max-width: 70%;
+    min-width: 70%;
+    margin-top: 20px;
+    max-height: 120px;
+    padding: 8px 0 8px 8px;
+    outline: none;
+    background-color: #cccccc;
+}
+
+.contact form input[type="submit"] {
+    width: 40%;
+    padding: 8px;
+    color: #968888;
+    background: transparent;
+    border: 1px solid #968888;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contact h1 {
+        font-size: 35px;
+    }
+}
+
+/*
+    ===============================
+            Footer Style
+    ===============================
+*/
+
+footer{
+    text-align: center;
+    color: #968888;
+    margin-top: 50px;
+    padding: 15px;
+}
