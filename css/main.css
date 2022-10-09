@@ -1,6 +1,6 @@
 /*
     ===============================
-            Global Rules
+            Global Styles
     ===============================
 */
 
@@ -58,6 +58,10 @@ html{
     width: 50%;
 }
 
+.navlist{
+    width: 100%;
+}
+
 .nav .navlist ul li{
     display: inline-block;
 }
@@ -103,10 +107,10 @@ html{
     background-size: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
-    .nav .logo{
-        width: 100%;
+    .logo{
+        font-size: 11px;
     }
 
     .nav label {
